@@ -11,13 +11,19 @@ public class Libro {
     //Constructor sin parámetro
     public Libro(){
         this.titulo = "Sin Título";
+
     }
 
     //Constructor con parametros
     public Libro(int unIsbn, String unTitulo, String unAutor, int unNumPag){
         this.isbn = unIsbn;
         this.titulo = unTitulo;
-        this.autor = unAutor;
+        if(unAutor.isEmpty()){
+            this.autor = "Desconocido";
+        }else{
+            this.autor = unAutor;
+        }
+
         this.numPag = unNumPag;
     }
 
@@ -52,15 +58,6 @@ public class Libro {
     public int getNumPag(){
         return this.numPag;
     }
-
-    private boolean esDesconocido(){
-        if(this.getAutor() == null){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
 
     //Metodo toString
 

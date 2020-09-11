@@ -15,14 +15,9 @@ public class Librería {
         System.out.println("Ingrese cantidad de páginas: ");
         int numPag1 = input.nextInt();
 
-        Libro l1 = new Libro();
-        l1.setIsbn(isbn1);
-        l1.setTitulo(titulo1);
-        l1.setAutor(autor1);
-        l1.setNumPag(numPag1);
+        Libro l1 = new Libro(isbn1, titulo1, autor1, numPag1);
 
-        System.out.println("**************Libro 1**************");
-        System.out.println(l1);
+
 
         System.out.println("Ingrese ISBN: ");
         int isbn2 = input.nextInt();
@@ -33,12 +28,9 @@ public class Librería {
         System.out.println("Ingrese cantidad de páginas: ");
         int numPag2 = input.nextInt();
 
-        Libro l2 = new Libro();
-        l2.setIsbn(isbn2);
-        l2.setTitulo(titulo2);
-        l2.setAutor(autor2);
-        l2.setNumPag(numPag2);
-
+        Libro l2 = new Libro(isbn2,titulo2, autor2,numPag2);
+        System.out.println("**************Libro 1**************");
+        System.out.println(l1);
         System.out.println("**************Libro 2**************");
         System.out.println(l2);
     }
