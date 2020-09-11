@@ -11,7 +11,6 @@ public class Libro {
     //Constructor sin parámetro
     public Libro(){
         this.titulo = "Sin Título";
-        this.autor = null;
     }
 
     //Constructor con parametros
@@ -42,7 +41,6 @@ public class Libro {
     public void setAutor(String unAutor){
         this.autor = unAutor;
     }
-
     public String getAutor(){
         return this.autor;
     }
@@ -55,16 +53,19 @@ public class Libro {
         return this.numPag;
     }
 
+    private boolean esDesconocido(){
+        if(this.getAutor() == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
     //Metodo toString
 
     public String toString(){
-            String retorno = "";
-            if (this.getAutor() == null){
-                retorno = "El libro " + this.getTitulo() + " con ISBN " + this.getIsbn() + " creado por el autor Desconocido " + " y tiene " + this.getNumPag() + " páginas";
-            }else{
-                retorno = "El libro " + this.getTitulo() + " con ISBN " + this.getIsbn() + " creado por el autor " + this.getAutor() + " y tiene " + this.getNumPag() + " páginas";
-            }
+        String retorno = "El libro " + this.getTitulo() + " con ISBN " + this.getIsbn() + " creado por el autor " + this.getAutor() + " y tiene " + this.getNumPag() + " páginas";
             return retorno;
     }
 
