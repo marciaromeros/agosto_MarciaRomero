@@ -1,0 +1,9 @@
+<suite name="Testng - Booking">
+    <test name="Ejecucion de pruebas">
+        <classes>
+            <class name="test.prueba_mailchimp"></class>
+        </classes>
+    </test>
+
+
+</suite>
